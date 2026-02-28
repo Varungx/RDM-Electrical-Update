@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industries Served | RDM Electrical - Commercial & Industrial Expertise</title>
+    <meta name="description" content="RDM Electrical provides specialized electrical solutions for various industries, including retail, office, healthcare, and industrial sectors.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#1a1a1a',
+                        electricBlue: '#0066FF',
+                        safetyYellow: '#FFC107',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans" x-data="{ mobileMenuOpen: false }">
+
+    <!-- Header / Navigation (Same as index.html) -->
+    <header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-slate-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="assets/images/RDMLOGO.png" alt="RDM Electricals Logo" class="h-12 w-auto">
+                        <span class="text-2xl font-bold tracking-tight text-charcoal uppercase">RDM <span class="text-electricBlue">Electricals</span></span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-semibold text-slate-600 hover:text-electricBlue transition-colors">Home</a>
+                    <a href="services.html" class="text-sm font-semibold text-slate-600 hover:text-electricBlue transition-colors">Services</a>
+                    <a href="projects.html" class="text-sm font-semibold text-slate-600 hover:text-electricBlue transition-colors">Projects</a>
+                    <a href="about.html" class="text-sm font-semibold text-slate-600 hover:text-electricBlue transition-colors">About</a>
+                    <a href="industries.html" class="text-sm font-semibold text-electricBlue hover:text-blue-700 transition-colors">Industries</a>
+                    <a href="contact.html" class="bg-charcoal text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-slate-800 transition-all transform hover:-translate-y-0.5">Request Quote</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-slate-600 focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8" x-show="!mobileMenuOpen"></i>
+                        <i data-lucide="x" class="w-8 h-8" x-show="mobileMenuOpen"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" class="md:hidden bg-white border-b border-slate-200">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-4 text-base font-bold text-slate-600 border-b border-slate-50">Home</a>
+                <a href="services.html" class="block px-3 py-4 text-base font-bold text-slate-600 border-b border-slate-50">Services</a>
+                <a href="projects.html" class="block px-3 py-4 text-base font-bold text-slate-600 border-b border-slate-50">Projects</a>
+                <a href="about.html" class="block px-3 py-4 text-base font-bold text-slate-600 border-b border-slate-50">About</a>
+                <a href="industries.html" class="block px-3 py-4 text-base font-bold text-electricBlue border-b border-slate-50">Industries</a>
+                <a href="contact.html" class="block px-3 py-4 text-base font-bold text-slate-600">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h1 class="text-4xl md:text-6xl font-black text-charcoal mb-6 tracking-tight uppercase">Industries <span class="text-electricBlue">We Serve</span></h1>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto font-medium leading-relaxed">
+                    We bring specialized electrical expertise to a diverse range of sectors, ensuring tailored solutions that meet industry-specific requirements and safety standards.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Retail & Showrooms -->
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-blue-50 text-electricBlue rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shopping-bag" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-charcoal mb-4 uppercase tracking-tight">Retail & Showrooms</h3>
+                    <p class="text-slate-600 font-medium mb-6">High-impact display lighting, POS system wiring, and energy-efficient climate control systems for retail environments.</p>
+                    <ul class="text-sm font-bold text-slate-400 space-y-2">
+                        <li>Accent Lighting</li>
+                        <li>Security Systems</li>
+                        <li>Emergency Exit Lighting</li>
+                    </ul>
+                </div>
+
+                <!-- Corporate Offices -->
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-blue-50 text-electricBlue rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i data-lucide="building" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-charcoal mb-4 uppercase tracking-tight">Corporate Offices</h3>
+                    <p class="text-slate-600 font-medium mb-6">Complete electrical infrastructure for modern workplaces, including data cabling and specialized conference room tech wiring.</p>
+                    <ul class="text-sm font-bold text-slate-400 space-y-2">
+                        <li>Data Cabling</li>
+                        <li>Smart Office Controls</li>
+                        <li>UPS Systems</li>
+                    </ul>
+                </div>
+
+                <!-- Healthcare & Clinics -->
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-blue-50 text-electricBlue rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i data-lucide="heart-pulse" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-charcoal mb-4 uppercase tracking-tight">Healthcare & Clinics</h3>
+                    <p class="text-slate-600 font-medium mb-6">Specialized wiring for medical equipment, reliable backup power systems, and high-standard hygienic installations.</p>
+                    <ul class="text-sm font-bold text-slate-400 space-y-2">
+                        <li>Medical Grade Outlets</li>
+                        <li>Backup Power</li>
+                        <li>Sanitary Installations</li>
+                    </ul>
+                </div>
+
+                <!-- Restaurants & Hospitality -->
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-blue-50 text-electricBlue rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i data-lucide="utensils" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-charcoal mb-4 uppercase tracking-tight">Restaurants & Hospitality</h3>
+                    <p class="text-slate-600 font-medium mb-6">Kitchen equipment wiring, mood lighting for dining areas, and outdoor patio electrical systems.</p>
+                    <ul class="text-sm font-bold text-slate-400 space-y-2">
+                        <li>Commercial Kitchen Wiring</li>
+                        <li>Ambiance Controls</li>
+                        <li>Outdoor Heating/Power</li>
+                    </ul>
+                </div>
+
+                <!-- Industrial & Warehousing -->
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-blue-50 text-electricBlue rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i data-lucide="factory" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-charcoal mb-4 uppercase tracking-tight">Industrial & Warehousing</h3>
+                    <p class="text-slate-600 font-medium mb-6">High-bay lighting, heavy machinery power supply, and large-scale distribution panel management.</p>
+                    <ul class="text-sm font-bold text-slate-400 space-y-2">
+                        <li>Three-Phase Power</li>
+                        <li>Industrial High-Bays</li>
+                        <li>Equipment Circuits</li>
+                    </ul>
+                </div>
+
+                <!-- Education & Schools -->
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-blue-50 text-electricBlue rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i data-lucide="graduation-cap" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-charcoal mb-4 uppercase tracking-tight">Education & Schools</h3>
+                    <p class="text-slate-600 font-medium mb-6">Safe and durable electrical systems for classrooms, laboratories, and outdoor campus lighting.</p>
+                    <ul class="text-sm font-bold text-slate-400 space-y-2">
+                        <li>Classroom Technology</li>
+                        <li>Lab Safety Systems</li>
+                        <li>Campus Lighting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="mt-24 bg-charcoal rounded-[3rem] p-12 text-center text-white relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-full bg-electricBlue/10 skew-y-6 translate-y-1/2"></div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-black mb-6 uppercase tracking-tight">Don't see your industry?</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto mb-10 font-medium text-lg">We handle custom electrical requirements across all sectors. Contact us to discuss your specific needs.</p>
+                    <a href="contact.html" class="inline-block bg-safetyYellow text-charcoal px-10 py-4 rounded-xl font-black text-lg hover:bg-amber-500 transition-all uppercase tracking-tight">Inquire About Your Sector</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-charcoal text-slate-300 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <img src="assets/images/RDMLOGO.png" alt="RDM Electricals Logo" class="h-16 w-auto mx-auto mb-8 opacity-80">
+            <div class="border-t border-white/5 pt-10 text-xs font-bold uppercase tracking-widest text-slate-500">
+                <p>&copy; 2026 RDM Electricals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

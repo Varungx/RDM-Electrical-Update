@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | RDM Electrical - Residential & Commercial Solutions</title>
+    <meta name="description" content="Explore our wide range of electrical installation services, from residential wiring to commercial fit-outs. Quality work with a safety-first approach.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#1a1a1a',
+                        electricBlue: '#0066FF',
+                        safetyYellow: '#FFC107',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans" x-data="{ mobileMenuOpen: false }">
+
+    <!-- Header / Navigation (Same as index.html) -->
+    <header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-slate-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="assets/images/RDMLOGO.png" alt="RDM Electricals Logo" class="h-12 w-auto">
+                        <span class="text-2xl font-bold tracking-tight text-charcoal uppercase">RDM <span class="text-electricBlue">Electricals</span></span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-semibold text-slate-600 hover:text-electricBlue transition-colors">Home</a>
+                    <a href="services.html" class="text-sm font-semibold text-electricBlue hover:text-blue-700 transition-colors">Services</a>
+                    <a href="projects.html" class="text-sm font-semibold text-slate-600 hover:text-electricBlue transition-colors">Projects</a>
+                    <a href="about.html" class="text-sm font-semibold text-slate-600 hover:text-electricBlue transition-colors">About</a>
+                    <a href="industries.html" class="text-sm font-semibold text-slate-600 hover:text-electricBlue transition-colors">Industries</a>
+                    <a href="contact.html" class="bg-charcoal text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-slate-800 transition-all transform hover:-translate-y-0.5">Request Quote</a>
+                </nav>
+                <div class="md:hidden flex items-center space-x-4">
+                    <a href="tel:8686781748" class="text-electricBlue p-2 bg-blue-50 rounded-full">
+                        <i data-lucide="phone" class="w-6 h-6"></i>
+                    </a>
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-slate-600 focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8" x-show="!mobileMenuOpen"></i>
+                        <i data-lucide="x" class="w-8 h-8" x-show="mobileMenuOpen"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Same as index.html) -->
+        <div x-show="mobileMenuOpen" class="md:hidden bg-white border-b border-slate-200">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-4 text-base font-bold text-slate-600 border-b border-slate-50">Home</a>
+                <a href="services.html" class="block px-3 py-4 text-base font-bold text-electricBlue border-b border-slate-50">Services</a>
+                <a href="projects.html" class="block px-3 py-4 text-base font-bold text-slate-600 border-b border-slate-50">Projects</a>
+                <a href="about.html" class="block px-3 py-4 text-base font-bold text-slate-600 border-b border-slate-50">About</a>
+                <a href="industries.html" class="block px-3 py-4 text-base font-bold text-slate-600 border-b border-slate-50">Industries</a>
+                <a href="contact.html" class="block px-3 py-4 text-base font-bold text-slate-600">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24">
+        <!-- Page Header -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 text-center">
+            <h1 class="text-4xl md:text-6xl font-black text-charcoal mb-6 tracking-tight uppercase">Professional Electrical <span class="text-electricBlue">Services</span></h1>
+            <p class="text-lg text-slate-600 max-w-3xl mx-auto font-medium">
+                Comprehensive electrical solutions for every environment. From simple home repairs to complex commercial installations, RDM Electrical delivers with precision and safety.
+            </p>
+        </div>
+
+        <!-- Service Categories -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
+            
+            <!-- Residential Services Section -->
+            <section id="residential">
+                <div class="flex items-center space-x-4 mb-12">
+                    <div class="w-12 h-12 bg-blue-100 text-electricBlue rounded-xl flex items-center justify-center">
+                        <i data-lucide="home" class="w-6 h-6"></i>
+                    </div>
+                    <h2 class="text-3xl font-black text-charcoal tracking-tight uppercase">Residential <span class="text-electricBlue">Solutions</span></h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- New Outlets -->
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <h3 class="text-xl font-black text-charcoal mb-4">Outlets & Switches</h3>
+                        <p class="text-slate-600 mb-6 font-medium">Installation of new power outlets, USB charging ports, and modern switch systems for improved convenience.</p>
+                        <div class="space-y-2 mb-8 text-sm font-bold text-slate-500">
+                            <p class="flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-2"></i> Est. Time: 1-2 hours</p>
+                            <p class="flex items-center"><i data-lucide="tag" class="w-4 h-4 mr-2 text-blue-500"></i> Residential</p>
+                        </div>
+                        <a href="contact.html#quote" class="block text-center bg-slate-50 text-electricBlue font-black py-3 rounded-xl hover:bg-blue-50 transition-colors border border-blue-100">Request Quote</a>
+                    </div>
+
+                    <!-- Lighting -->
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <h3 class="text-xl font-black text-charcoal mb-4">Indoor/Outdoor Lighting</h3>
+                        <p class="text-slate-600 mb-6 font-medium">Full lighting design and installation, including LED upgrades, recessed lighting, and landscape illumination.</p>
+                        <div class="space-y-2 mb-8 text-sm font-bold text-slate-500">
+                            <p class="flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-2"></i> Est. Time: 2-6 hours</p>
+                            <p class="flex items-center"><i data-lucide="tag" class="w-4 h-4 mr-2 text-blue-500"></i> Residential</p>
+                        </div>
+                        <a href="contact.html#quote" class="block text-center bg-slate-50 text-electricBlue font-black py-3 rounded-xl hover:bg-blue-50 transition-colors border border-blue-100">Request Quote</a>
+                    </div>
+
+                    <!-- Panel Upgrades -->
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <h3 class="text-xl font-black text-charcoal mb-4">Panel Upgrades</h3>
+                        <p class="text-slate-600 mb-6 font-medium">Modernizing your distribution board/panel to handle higher loads and improve safety with new breakers.</p>
+                        <div class="space-y-2 mb-8 text-sm font-bold text-slate-500">
+                            <p class="flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-2"></i> Est. Time: 1-2 days</p>
+                            <p class="flex items-center"><i data-lucide="tag" class="w-4 h-4 mr-2 text-blue-500"></i> Residential</p>
+                        </div>
+                        <a href="contact.html#quote" class="block text-center bg-slate-50 text-electricBlue font-black py-3 rounded-xl hover:bg-blue-50 transition-colors border border-blue-100">Request Quote</a>
+                    </div>
+
+                    <!-- Wiring -->
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <h3 class="text-xl font-black text-charcoal mb-4">Full Rewiring</h3>
+                        <p class="text-slate-600 mb-6 font-medium">Complete replacement of old, dangerous wiring in older homes to meet modern safety standards.</p>
+                        <div class="space-y-2 mb-8 text-sm font-bold text-slate-500">
+                            <p class="flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-2"></i> Est. Time: 1-2 weeks</p>
+                            <p class="flex items-center"><i data-lucide="tag" class="w-4 h-4 mr-2 text-blue-500"></i> Residential</p>
+                        </div>
+                        <a href="contact.html#quote" class="block text-center bg-slate-50 text-electricBlue font-black py-3 rounded-xl hover:bg-blue-50 transition-colors border border-blue-100">Request Quote</a>
+                    </div>
+
+                    <!-- Fault Finding -->
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <h3 class="text-xl font-black text-charcoal mb-4">Fault Finding</h3>
+                        <p class="text-slate-600 mb-6 font-medium">Professional diagnostics to locate and repair electrical faults, tripping breakers, or flickering lights.</p>
+                        <div class="space-y-2 mb-8 text-sm font-bold text-slate-500">
+                            <p class="flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-2"></i> Est. Time: 1-4 hours</p>
+                            <p class="flex items-center"><i data-lucide="tag" class="w-4 h-4 mr-2 text-blue-500"></i> Residential</p>
+                        </div>
+                        <a href="contact.html#quote" class="block text-center bg-slate-50 text-electricBlue font-black py-3 rounded-xl hover:bg-blue-50 transition-colors border border-blue-100">Request Quote</a>
+                    </div>
+
+                    <!-- Surge Protection -->
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <h3 class="text-xl font-black text-charcoal mb-4">Surge Protection</h3>
+                        <p class="text-slate-600 mb-6 font-medium">Whole-home surge protection to shield your appliances and electronics from voltage spikes.</p>
+                        <div class="space-y-2 mb-8 text-sm font-bold text-slate-500">
+                            <p class="flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-2"></i> Est. Time: 2-3 hours</p>
+                            <p class="flex items-center"><i data-lucide="tag" class="w-4 h-4 mr-2 text-blue-500"></i> Residential</p>
+                        </div>
+                        <a href="contact.html#quote" class="block text-center bg-slate-50 text-electricBlue font-black py-3 rounded-xl hover:bg-blue-50 transition-colors border border-blue-100">Request Quote</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Commercial Services Section -->
+            <section id="commercial">
+                <div class="flex items-center space-x-4 mb-12">
+                    <div class="w-12 h-12 bg-amber-100 text-safetyYellow rounded-xl flex items-center justify-center">
+                        <i data-lucide="building-2" class="w-6 h-6"></i>
+                    </div>
+                    <h2 class="text-3xl font-black text-charcoal tracking-tight uppercase">Commercial <span class="text-electricBlue">Solutions</span></h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Office Fit-outs -->
+                    <div class="group relative bg-charcoal p-10 rounded-[2rem] overflow-hidden text-white transition-all hover:scale-[1.02]">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-electricBlue/10 rounded-full -mr-32 -mt-32"></div>
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-black mb-4">Office & Retail Fit-outs</h3>
+                            <p class="text-slate-400 mb-8 font-medium leading-relaxed">Complete electrical infrastructure for new commercial spaces, including power distribution, data cabling, and specialized lighting.</p>
+                            <ul class="space-y-3 mb-10 text-sm font-bold">
+                                <li class="flex items-center text-slate-300"><i data-lucide="check" class="w-4 h-4 mr-3 text-electricBlue"></i> Full power layout design</li>
+                                <li class="flex items-center text-slate-300"><i data-lucide="check" class="w-4 h-4 mr-3 text-electricBlue"></i> Dedicated server circuits</li>
+                                <li class="flex items-center text-slate-300"><i data-lucide="check" class="w-4 h-4 mr-3 text-electricBlue"></i> POS system wiring</li>
+                                <li class="flex items-center text-slate-300"><i data-lucide="check" class="w-4 h-4 mr-3 text-electricBlue"></i> Fire alarm & safety systems</li>
+                            </ul>
+                            <div class="flex items-center justify-between">
+                                <div class="text-xs uppercase font-black tracking-widest text-slate-500">Timeline: Custom</div>
+                                <a href="contact.html#quote" class="bg-white text-charcoal px-6 py-3 rounded-xl font-black hover:bg-slate-100 transition-colors">Request Site Visit</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maintenance Contracts -->
+                    <div class="group relative bg-slate-200 p-10 rounded-[2rem] overflow-hidden text-charcoal transition-all hover:scale-[1.02] border border-slate-300">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-charcoal/5 rounded-full -mr-32 -mt-32"></div>
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-black mb-4">Maintenance Contracts</h3>
+                            <p class="text-slate-600 mb-8 font-medium leading-relaxed">Ongoing electrical support and periodic testing for commercial buildings to ensure constant safety and minimal downtime.</p>
+                            <ul class="space-y-3 mb-10 text-sm font-bold">
+                                <li class="flex items-center text-slate-700"><i data-lucide="check" class="w-4 h-4 mr-3 text-electricBlue"></i> Periodic safety testing</li>
+                                <li class="flex items-center text-slate-700"><i data-lucide="check" class="w-4 h-4 mr-3 text-electricBlue"></i> Emergency call-out priority</li>
+                                <li class="flex items-center text-slate-700"><i data-lucide="check" class="w-4 h-4 mr-3 text-electricBlue"></i> Preventive maintenance</li>
+                            </ul>
+                            <div class="flex items-center justify-between">
+                                <div class="text-xs uppercase font-black tracking-widest text-slate-400">Timeline: Ongoing</div>
+                                <a href="contact.html#quote" class="bg-charcoal text-white px-6 py-3 rounded-xl font-black hover:bg-slate-800 transition-colors">Enquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Specialty Section -->
+            <section id="specialty" class="bg-white p-12 rounded-[3rem] border border-slate-200">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-black text-charcoal uppercase tracking-tight">Specialty <span class="text-electricBlue">Installations</span></h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-50 text-electricBlue rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="battery-charging" class="w-8 h-8"></i>
+                        </div>
+                        <h4 class="text-lg font-black text-charcoal mb-3">Generator/Inverter</h4>
+                        <p class="text-slate-600 text-sm font-medium">Backup power solutions for uninterrupted supply during outages.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-50 text-electricBlue rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="clipboard-check" class="w-8 h-8"></i>
+                        </div>
+                        <h4 class="text-lg font-black text-charcoal mb-3">Safety Inspections</h4>
+                        <p class="text-slate-600 text-sm font-medium">Detailed testing and certification for insurance or property sale.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-50 text-electricBlue rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="car" class="w-8 h-8"></i>
+                        </div>
+                        <h4 class="text-lg font-black text-charcoal mb-3">EV Charging</h4>
+                        <p class="text-slate-600 text-sm font-medium">Home and commercial electric vehicle charging point installation.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!-- Recent Work Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 mb-12">
+            <div class="bg-charcoal rounded-[3rem] p-12 md:p-20 overflow-hidden relative shadow-2xl">
+                <div class="absolute top-0 right-0 w-1/2 h-full bg-electricBlue/10 skew-x-12 translate-x-1/4"></div>
+                <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between">
+                    <div class="lg:w-1/2 mb-12 lg:mb-0">
+                        <h2 class="text-safetyYellow font-black uppercase tracking-[0.2em] mb-4">See the quality</h2>
+                        <h3 class="text-3xl md:text-5xl font-black text-white mb-8 tracking-tight uppercase">Quality You Can <span class="text-electricBlue">Trust</span></h3>
+                        <p class="text-slate-400 text-lg mb-10 font-medium leading-relaxed max-w-xl">
+                            Our work speaks for itself. We maintain high standards for every installation, ensuring neat, safe, and efficient electrical systems.
+                        </p>
+                        <a href="projects.html" class="inline-flex items-center bg-white text-charcoal px-8 py-4 rounded-xl font-black text-lg hover:bg-slate-100 transition-all group">
+                            Explore All Projects 
+                            <i data-lucide="arrow-right" class="w-6 h-6 ml-3 transition-transform group-hover:translate-x-2"></i>
+                        </a>
+                    </div>
+                    <div class="lg:w-2/5 grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform">
+                                <img src="assets/images/panel3.jpeg" alt="Electrical Work" class="w-full h-full object-cover">
+                            </div>
+                            <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl transform translate-x-4 hover:scale-105 transition-transform">
+                                <img src="assets/images/apartmentspanel.jpeg" alt="Electrical Work" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform">
+                                <img src="assets/images/biggerpanel.jpeg" alt="Electrical Work" class="w-full h-full object-cover">
+                            </div>
+                            <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl transform -translate-x-4 hover:scale-105 transition-transform">
+                                <img src="assets/images/panel1.jpeg" alt="Electrical Work" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-charcoal text-slate-300 pt-20 pb-10">
+        <!-- ... (same footer as index.html) ... -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2 lg:col-span-1">
+                    <a href="index.html" class="flex items-center space-x-2 mb-6">
+                        <img src="assets/images/RDMLOGO.png" alt="RDM Electricals Logo" class="h-10 w-auto">
+                        <span class="text-xl font-bold tracking-tight text-white uppercase">RDM <span class="text-electricBlue">Electricals</span></span>
+                    </a>
+                    <p class="text-slate-400 mb-8 leading-relaxed font-medium">Professional contractor-grade electrical installations for residential and commercial properties.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-black uppercase tracking-widest text-sm mb-6">Quick Links</h4>
+                    <ul class="space-y-4 font-bold text-sm">
+                        <li><a href="index.html" class="hover:text-electricBlue transition-colors">Home</a></li>
+                        <li><a href="services.html" class="hover:text-electricBlue transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-electricBlue transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-black uppercase tracking-widest text-sm mb-6">Contact</h4>
+                    <ul class="space-y-4 font-medium text-sm">
+                        <li><a href="tel:8686781748" class="hover:text-white transition-colors">(868) 678-1748</a></li>
+                        <li>Port of Spain, Trinidad</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-black uppercase tracking-widest text-sm mb-6">Emergency</h4>
+                    <p class="text-electricBlue font-black text-lg">24/7 Available</p>
+                    <p class="text-slate-500 text-xs mt-2 uppercase font-bold tracking-widest">Call: (868) 678-1748</p>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-10 text-center text-xs font-bold uppercase tracking-widest text-slate-500">
+                <p>&copy; 2026 RDM Electricals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTAs (Mobile) -->
+    <div class="md:hidden fixed bottom-6 left-4 right-4 z-40 flex space-x-4">
+        <a href="tel:8686781748" class="flex-1 bg-electricBlue text-white flex items-center justify-center py-4 rounded-2xl shadow-2xl font-black"><i data-lucide="phone" class="w-6 h-6 mr-2"></i> Call</a>
+        <a href="https://wa.me/18686781748" class="flex-1 bg-green-500 text-white flex items-center justify-center py-4 rounded-2xl shadow-2xl font-black"><i data-lucide="message-circle" class="w-6 h-6 mr-2"></i> WhatsApp</a>
+    </div>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
